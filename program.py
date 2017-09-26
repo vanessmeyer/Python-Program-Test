@@ -110,7 +110,14 @@ class Product:
 		else:
 			return total 
 
-robot = Product(price=900, count=2, tax=1.25, name=robot)
-book = Product(price=100, count=1, tax=1.06, name=book)
+robot = Product(price=900, count=2, tax=1.25, name= "robot")
+book = Product(price=100, count=1, tax=1.06, name= "book")
+
 
 print (robot.price_with_tax() + book.price_with_tax(), "an if statement")
+
+# Lägg till en extra loop längst ner i programmet som skriver ut namnet på varje produkt plus priset för just den produkten
+
+for product in products:
+	print (robot.name, robot.price_with_tax())
+	print(book.name, book.price_with_tax())
