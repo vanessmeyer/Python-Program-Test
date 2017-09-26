@@ -97,10 +97,11 @@ print(total_price, "a loop command")
 # This is an IF-Statement.
 
 class Product:
-	def __init__(self, price, count, tax):
+	def __init__(self, price, count, tax, name):
 		self.price = price
 		self.count = count
 		self.tax = tax
+		self.name = name
 
 	def price_with_tax(self):
 		total = self.price * self.count * self.tax
@@ -109,7 +110,7 @@ class Product:
 		else:
 			return total 
 
-robot = Product(price=900, count=2, tax=1.25)
-book = Product(price=100, count=1, tax=1.06)
+robot = Product(price=900, count=2, tax=1.25, name=robot)
+book = Product(price=100, count=1, tax=1.06, name=book)
 
 print (robot.price_with_tax() + book.price_with_tax(), "an if statement")
